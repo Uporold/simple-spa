@@ -1,0 +1,17 @@
+@import "src/styles/variables";
+
+.sorting-menu {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+
+  min-height: 100vh;
+  background-color: $asideBackgroundColor;
+
+  padding: 35px 26px 0 20px;
+
+  &__title {
+    font-size: 12px;
+  }
+}

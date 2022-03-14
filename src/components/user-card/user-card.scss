@@ -1,0 +1,38 @@
+@import "src/styles/variables";
+
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F3F3F3;
+  padding: 10px;
+  border-radius: 8px;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    list-style-type: none;
+    font-size: 11px;
+  }
+
+  &__row {
+    display: flex;
+    gap: 7px;
+    color: $secondaryFontColor;
+
+    span {
+      color: $mainFontColor;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $defaultButtonColor;
+    font-size: 12px;
+    align-self: flex-end;
+
+    &:hover, &:active {
+      color: darken($defaultButtonColor, 25)
+    }
+  }
+}

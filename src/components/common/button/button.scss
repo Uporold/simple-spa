@@ -1,0 +1,30 @@
+@import "src/styles/variables";
+
+.btn {
+  padding: 5px 15px 5px 15px;
+  background-color: $defaultButtonColor;
+  color: $white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: darken($defaultButtonColor, 10);
+  }
+
+  &--submit {
+    background-color: $submitButtonColor;
+    align-self: flex-end;
+
+    &:hover {
+      background-color: darken($submitButtonColor, 10);
+    }
+  }
+
+  &:disabled {
+    background-color: $disabledButtonColor;
+    cursor: default;
+  }
+}

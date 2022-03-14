@@ -1,0 +1,10 @@
+.users {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__count {
+    font-size: 12px;
+    text-align: right;
+  }
+}

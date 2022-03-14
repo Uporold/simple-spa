@@ -6,3 +6,8 @@ export const SortType = {
 
 type Keys = keyof typeof SortType;
 export type SortType = typeof SortType[Keys];
+
+export const PagePath = {
+  MAIN: `/`,
+  USER: (id: number | string = `:id`): string => `/users/${id}`,
+};
