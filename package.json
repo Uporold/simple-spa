@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "start": "webpack serve --config config/webpack.dev.config.ts",
-    "build": "webpack --config config/webpack.prod.config.ts"
+    "build": "webpack --config config/webpack.prod.config.ts",
+    "format": "prettier --write src/**/*.ts{,x}",
+    "lint": "tsc --noEmit && eslint src/**/*.ts{,x} --fix"
   },
   "repository": {
     "type": "git",
