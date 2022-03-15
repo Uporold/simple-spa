@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./user-card.scss";
 import { Link } from "react-router-dom";
 import { User } from "../../api/types";
@@ -8,7 +8,7 @@ interface Props {
   user: User;
 }
 
-export const UserCard: React.FC<Props> = ({ user }) => {
+export const UserCard: React.FC<Props> = memo(({ user }) => {
   const { name, address, company } = user;
   return (
     <li className="user-card">
@@ -28,4 +28,4 @@ export const UserCard: React.FC<Props> = ({ user }) => {
       </Link>
     </li>
   );
-};
+});
