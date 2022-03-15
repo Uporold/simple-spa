@@ -12,9 +12,12 @@ export const appSlice = createSlice({
     SET_SORT_TYPE(state, action) {
       state.currentSortType = action.payload;
     },
+    RESET_SORT_TYPE() {
+      return initialState;
+    },
   },
 });
 
-export const { SET_SORT_TYPE } = appSlice.actions;
+export const { SET_SORT_TYPE, RESET_SORT_TYPE } = appSlice.actions;
 
 export default appSlice.reducer;

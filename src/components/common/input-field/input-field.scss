@@ -1,0 +1,31 @@
+@import "src/styles/variables";
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 55%;
+
+  label {
+    font-size: 11px;
+  }
+
+  input {
+    font-size: 13px;
+    padding: 5px 10px;
+    border: 1px solid $defaultBorderColor;
+    border-radius: 5px;
+  }
+
+  &--error {
+    input {
+      border: 1px solid $errorBorderColor;
+      outline: none;
+      box-shadow: none;
+
+      &:focus {
+        box-shadow: 0 0 3px $errorBorderColor;
+      }
+    }
+  }
+}

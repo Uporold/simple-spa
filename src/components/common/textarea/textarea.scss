@@ -1,0 +1,20 @@
+@import "src/styles/variables";
+
+.textarea {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  &__label {
+    font-size: 11px;
+  }
+
+  textarea {
+    resize: none;
+    width: 100%;
+    min-height: 55px;
+    border: 1px solid $defaultBorderColor;
+    border-radius: 5px;
+    padding: 5px;
+  }
+}

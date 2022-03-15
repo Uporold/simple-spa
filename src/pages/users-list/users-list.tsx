@@ -8,12 +8,14 @@ import {
 } from "../../store/user/hooks/selectors";
 import { useLoadUsers } from "../../store/user/hooks/useLoadUsers";
 import { useResetUsers } from "../../store/user/hooks/useResetUsers";
+import { useResetSortType } from "../../store/app/hooks/useResetSortType";
 
 export const UsersList = () => {
   const loadUsers = useLoadUsers();
   const isLoaded = useUsersLoadingStatus();
   const users = useUsersBySort();
   const resetUsers = useResetUsers();
+  const resetSortType = useResetSortType();
 
   useEffect(() => {
     loadUsers();
@@ -22,8 +24,9 @@ export const UsersList = () => {
   useEffect(() => {
     return () => {
       resetUsers();
+      resetSortType();
     };
-  }, [resetUsers]);
+  }, [resetSortType, resetUsers]);
 
   return isLoaded ? (
     <>

@@ -3,7 +3,7 @@
 .user-card {
   display: flex;
   justify-content: space-between;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   padding: 10px;
   border-radius: 8px;
   &__info {
@@ -31,8 +31,9 @@
     font-size: 12px;
     align-self: flex-end;
 
-    &:hover, &:active {
-      color: darken($defaultButtonColor, 25)
+    &:hover,
+    &:active {
+      color: darken($defaultButtonColor, 25);
     }
   }
 }
